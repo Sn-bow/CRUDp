@@ -14,10 +14,10 @@
       <div class="box">
         <div class="link-box">
           <span class="admin-link-span">
-            <a class="link" href="/admin/signIn/signIn.html">ADMIN LOGIN</a>
+            <a class="link" href="/admin/signIn">ADMIN LOGIN</a>
           </span>
           <span class="signUp-link-span">
-            <a class="link" href="/client/signUp/signUp.html">회원가입</a>
+            <a class="link" href="/client/signUp">회원가입</a>
           </span>
         </div>
         <div class="client-signIn-box">
