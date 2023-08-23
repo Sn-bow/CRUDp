@@ -10,12 +10,18 @@ const email = document.querySelector(".email");
 const pwd = document.querySelector(".pwd");
 const pwdCh = document.querySelector(".pwd-ch");
 const name_ = document.querySelector(".name");
+const phone2 = document.querySelector(".phone2");
+const phone3 = document.querySelector(".phone3");
+const birth = document.querySelector(".date");
 const but = document.querySelector(".signUpSubmit");
+
 // err
 const emailErr = document.querySelector(".emailErr");
 const pwdErr = document.querySelector(".pwdErr");
 const pwdChErr = document.querySelector(".pwdChErr");
 const nameErr = document.querySelector(".nameErr");
+const phoneErr = document.querySelector(".phoneErr");
+const birthErr = document.querySelector(".dateErr");
 
 // regexp
 let emailReg = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
@@ -26,16 +32,20 @@ let emailState = false;
 let pwdState = false;
 let pwdChState = false;
 let nameState = false;
-let phoneState = false;
-let date = false;
+let phone2State = false;
+let phone3State = false;
+let birthState = false;
+let cssState = false;
 
 // function
 // button activate handler
 const allCheckHandler = () => {
-  if (emailState && pwdState && pwdChState && nameState) {
-    but.disabled = false;
+  if (emailState && pwdState && pwdChState && nameState && phone2State && phone3State && birthState) {
+    cssState = false
+    but.disabled = cssState;
   } else {
-    but.disabled = true;
+	  cssState = true;
+    but.disabled = cssState;
   }
 };
 
@@ -89,6 +99,40 @@ const nameRegHandler = (value) => {
   allCheckHandler();
 };
 
+const phone2RegHandler = (value) => {
+	if(value === "") {
+		phone2State = false
+		phoneErr.innerText = "번호를 작성해주세요";
+	} else {
+		phone2State = true;
+		phoneErr.innerText = "";
+	}
+	allCheckHandler();
+}
+
+const phone3RegHandler = (value) => {
+	if(value === "") {
+		phone3State = false
+		phoneErr.innerText = "번호를 작성해주세요";
+	} else {
+		phone3State = true;
+		phoneErr.innerText = "";
+	}
+	allCheckHandler();
+}
+
+const birthRegHandler = (value) => {
+	if(value === "") {
+		birthState = false;
+		birthErr.innerText = "생일을 작성해주세요";
+	} else {
+		birthState = true;
+		birthErr.innerText = "";
+	}
+	allCheckHandler();
+}
+
+
 // input class name
 // email pwd pwd-ch name phone1 phone2 phone3 date signUpSubmit
 // 해야할일
@@ -109,10 +153,20 @@ name_.addEventListener("focusout", (e) => {
   nameRegHandler(e.target.value);
 });
 // 5. 전화번호 및 생일 체크했는지 확인
+phone2.addEventListener("focusout", (e) => {
+	phone2RegHandler(e.target.value)
+})
+phone3.addEventListener("focusout", (e) => {
+	phone3RegHandler(e.target.value)
+})
+birth.addEventListener("focusout", (e) => {
+	birthRegHandler(e.target.value)
+})
 // 6. 모든 확인이 끝났으면 submit 버튼 활성화
 
 // 버튼 css
-but.addEventListener("mouseover", () => {
+if(cssState){
+	but.addEventListener("mouseover", () => {
   but.setAttribute(
     "style",
     "transition: all 0.5s ease-in-out; cursor: pointer; color: white; background-color: rgb(50, 50, 50);"
@@ -123,4 +177,6 @@ but.addEventListener("mouseout", () => {
     "style",
     "transition: all 0.5s ease-in-out; cursor: pointer; color: black; background-color: lightgray;"
   );
-});
+});	
+}
+
