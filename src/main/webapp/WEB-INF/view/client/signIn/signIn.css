@@ -1,0 +1,101 @@
+body {
+  background-color: rgb(245, 245, 245);
+}
+.contain {
+  width: 100%;
+  height: 100%;
+}
+.box {
+  width: 500px;
+  height: 450px;
+  border: 2px solid gray;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 150px auto;
+}
+.link-box {
+  height: 20px;
+  padding: 2px;
+  text-align: right;
+}
+
+.admin-link-span {
+  height: 20px;
+  width: 110px;
+  margin-right: 8px;
+}
+.signUp-link-span {
+  height: 20px;
+  width: 110px;
+}
+
+.link {
+  text-decoration-line: none;
+  font-size: 18px;
+  color: gray;
+  transition: all 0.5s ease-in-out;
+}
+.link:hover {
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  color: black;
+}
+
+.client-signIn-box {
+  width: 100%;
+  height: 410px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.client-signIn-form {
+  width: 100%;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signIn-id {
+  width: 400px;
+  height: 25px;
+  padding: 5px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+.signIn-paw {
+  width: 400px;
+  height: 25px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+.signIn-submit {
+  width: 415px;
+  height: 35px;
+  padding: 5px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background-color: lightgray;
+  margin-bottom: 18px;
+  transition: all 0.5s ease-in-out;
+}
+
+.signIn-submit:hover {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(24, 24, 24);
+}
+
+.client-signUp-box {
+  height: 20px;
+  padding: 2px;
+  text-align: right;
+}

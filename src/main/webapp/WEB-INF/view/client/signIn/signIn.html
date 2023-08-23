@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../global/reset.css" />
+    <link rel="stylesheet" href="./signIn.css" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <div class="contain">
+      <div class="box">
+        <div class="link-box">
+          <span class="admin-link-span">
+            <a class="link" href="/admin/signIn/signIn.html">ADMIN LOGIN</a>
+          </span>
+          <span class="signUp-link-span">
+            <a class="link" href="/client/signUp/signUp.html">회원가입</a>
+          </span>
+        </div>
+        <div class="client-signIn-box">
+          <form
+            class="client-signIn-form"
+            action="/client/index/index.html"
+            method="post"
+          >
+            <input
+              class="signIn-id"
+              type="text"
+              name="email"
+              value=""
+              placeholder="이메일을 입력해주세요"
+              autofocus
+            />
+            <input
+              class="signIn-paw"
+              type="password"
+              name="password"
+              value=""
+              placeholder="비밀번호를 입력해주세요"
+            />
+            <input
+              class="signIn-submit"
+              type="submit"
+              name="sign-in"
+              value="로그인"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

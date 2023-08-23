@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../global/reset.css" />
+    <link rel="stylesheet" href="./reg.css" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <div class="contain">
+      <div class="box">
+        <div class="logout-link-box">
+          <a class="logout-link" href="/admin/signIn/signIn.html">logout</a>
+        </div>
+        <div class="reg-box">
+          <form>
+            <table class="reg-table">
+              <tr>
+                <th class="column">제목</th>
+                <td class="row">
+                  <input autofocus type="text" name="title" value="" />
+                </td>
+              </tr>
+              <tr>
+                <th class="column">파일첨부</th>
+                <td class="row"><input type="file" name="file" /></td>
+              </tr>
+              <tr>
+                <td class="content" colspan="2">
+                  <textarea name="content" value=""></textarea>
+                </td>
+              </tr>
+            </table>
+            <div class="conf-box">
+              <input class="conf reg" type="submit" name="reg" value="등록" />
+              <a class="conf cancle" href="/admin/board/list/list.html">취소</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
