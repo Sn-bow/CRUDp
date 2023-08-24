@@ -23,7 +23,6 @@
         <div class="client-signIn-box">
           <form
             class="client-signIn-form"
-            action="/client/index/index.html"
             method="post"
           >
             <input

@@ -1,56 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../../global/reset.css" />
-    <link rel="stylesheet" href="./detail.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/global/reset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/client/board/detail/detail.css" />
     <title>CRUD</title>
   </head>
   <body>
     <div class="contain">
       <div class="box">
         <div class="logout-link-box">
-          <a class="logout-link" href="/client/signIn/signIn.html">logout</a>
+        <form class="logout-link" action="/client/logout" method="post">
+          <input class="logout-link" type="submit" value="logout" />
+        </form>
         </div>
         <div>
           <table>
             <tr>
               <th class="column">제목</th>
-              <td class="row" colspan="3">tittle</td>
+              <td class="row" colspan="3">${detailBoard.title}</td>
             </tr>
             <tr>
               <th class="column">작성일</th>
-              <td class="row" colspan="3">tittle</td>
+              <td class="row" colspan="3">${detailBoard.regDate}</td>
             </tr>
             <tr>
               <th class="column">작성자</th>
-              <td class="row-harf">tittle</td>
+              <td class="row-harf">${fn:substringBefore(detailBoard.writerId, "@")}</td>
               <th class="column">조회수</th>
-              <td class="row-harf">tittle</td>
+              <td class="row-harf">${detailBoard.hit}</td>
             </tr>
             <tr>
               <th class="column">첨부파일</th>
               <td class="row" colspan="3">
                 <a download href="#"></a>
-                tittle
+                ${detailBoard.files}
               </td>
             </tr>
             <tr>
               <td class="content" colspan="3">
-                내용fdasdsadsadsadsdsadsada내용fdasdsadsads
+                ${detailBoard.content}
               </td>
             </tr>
           </table>
         </div>
         <div class="turnback-list-page-box">
-          <a href="/client/board/list/list.html" class="turnback-listPage-link"
+          <a href="/client/board/list" class="turnback-listPage-link"
             >목록</a
           >
-          <a href="/client/board/list/list.html" class="turnback-listPage-link"
+          <a href="/client/board/list" class="turnback-listPage-link"
             >수정</a
           >
-          <a href="/client/board/list/list.html" class="turnback-listPage-link"
+          <a href="/client/board/list" class="turnback-listPage-link"
             >삭제</a
           >
         </div>
