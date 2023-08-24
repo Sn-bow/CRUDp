@@ -7,6 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.CRUDp.web.client.service.SignInService;
 
 @WebServlet("/client/signIn")
 public class SignInController extends HttpServlet {
@@ -14,6 +17,27 @@ public class SignInController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		req.getRequestDispatcher("/WEB-INF/view/client/signIn/signIn.jsp").forward(req, resp);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		String email = req.getParameter("email");
+		String pwd = req.getParameter("password");
+
+		boolean state = false;
+		HttpSession session = req.getSession();
+
+		SignInService service = new SignInService();
+		state = service.setUserLogIn(email, pwd);
+
+		if (state) {
+			// session 로그인
+			session.setAttribute("userId", email);
+			resp.sendRedirect("index");
+		} else {
+			resp.sendRedirect("signIn");
+		}
 
 	}
 }

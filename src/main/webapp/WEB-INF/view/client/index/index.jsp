@@ -13,13 +13,16 @@
     <div class="contain">
       <div class="box">
         <div class="logout-link-box">
-          <a class="logout-link" href="/client/signIn">logout</a>
+        <form action="/client/logout" method="post">
+          <input type="submit" class="logout-link" name="logout" value="logout"/>
+        </form>
         </div>
         <h1 class="title">CRUD</h1>
+        <h3>${userId}님 환영합니다.</h3>
         <div class="board-list-box">
-          <a href="/client/board/list/list.html" class="board-list-link"
-            >게시판 리스트</a
-          >
+          <a href="/client/board/list" class="board-list-link">
+          	게시판 리스트
+          </a>
         </div>
       </div>
     </div>
