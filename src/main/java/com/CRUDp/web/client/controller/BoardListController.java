@@ -23,6 +23,7 @@ public class BoardListController extends HttpServlet {
 
 		String field = field_ != null && !field_.equals("") ? field_ : "title";
 		String query = query_ != null && !query_.equals("") ? query_ : "";
+		System.out.println("query : " + query);
 		int page = page_ != null && !page_.equals("") ? Integer.parseInt(page_) : 1;
 
 		List<BoardDto> boardList = new ArrayList<>();
