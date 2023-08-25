@@ -48,8 +48,8 @@
 						<td class="num">${n.id}</td>
 						<td class="title"><a href="/client/board/detail?board_id=${n.id}"
 							class="detail-link">${n.title}</a></td>
-						<td class="writer">${n.writerId}</td>
-						<td class="reg-date">${n.regDate}</td>
+						<td class="writer">${fn:substringBefore(n.writerId, "@")}</td>
+						<td class="reg-date"><fmt:formatDate value="${n.regDate}" pattern="yy-MM-dd"/></td>
 						<td class="hit">${n.hit}</td>
 					</tr>
 				</c:forEach>
@@ -92,7 +92,7 @@
 			
 			<div class="reg-box">
 				<form>
-					<a class="border-reg" href="/client/board/reg/reg.html">게시물
+					<a class="border-reg" href="/client/board/reg">게시물
 						작성하기</a>
 				</form>
 			</div>
