@@ -32,7 +32,6 @@
 - 회원가입후 로그인시 메인페이지로 이동 & 실패시 로그인페이지 재 출력
 
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/80d7a28b-c9ad-4cdf-8b11-0a7d284e155f)
-
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/c711079f-1def-4b65-9641-559a7ee79732)
 
 -> 로그인시 사용자 상태 관리는 Session을 통해서 이루어짐
@@ -60,7 +59,6 @@
 - 게시판 등록시 사용자 상태 확인후 작성자가 등록
 
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/f703e3ad-b8fe-4182-91e3-f6f933438dae)
-
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/6f24ce77-fd5c-4656-a070-52a99ec8db39)
 
 ### 게시물 디테일
@@ -72,7 +70,6 @@
 - 다음글, 이전글 이동 링크 구현
 
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/459ebafc-23e2-4890-8619-33c55f58a197)
-
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/c33bf716-1d76-4d7d-87e1-d03402b1ac76)
 
 
@@ -81,15 +78,12 @@
 - 작성한 게시물이 본인일 경우에 수정, 삭제 버튼 활성화되어 나타남
 
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/0ebe832e-b00c-4326-b79c-13dc0b6c27a3)
-
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/618a65b7-d1fa-4463-9a2a-d0286a3f46c4)
 
 - 수정 버튼 클릭시 기존의 데이터값이 들어오게 되고 수정시 Update 된 게시물 등록
 
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/a4485747-8c06-4510-b0e2-fd470d699a34)
-
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/6b8fe22a-14a1-42cd-890e-ee85b79436a6)
-
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/09a6ba74-b544-4352-b59b-fa75e25ef231)
 
 ### 게시물 삭제
@@ -97,7 +91,6 @@
 - 게시물 삭제 버튼 또한 사용자 본인일 경우 삭제 가능
 
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/e4a24dfc-0c03-47dd-8a41-21feece09c2b)
-
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/bc2d4749-c94d-4bb2-addd-98578f79d59f)
 
 ### 댓글 등록
@@ -105,7 +98,6 @@
 - 선택한 게시물에 댓글 등록
 
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/0b3c5aab-7a44-4641-9d42-a63d02a540d6)
-
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/475de78a-5dc9-4e0a-88ff-8fe44fef2760)
 
 ### 댓글 삭제
@@ -113,6 +105,5 @@
 - 댓글 등록한 작성자의 경우 삭제 버튼 활성화
 
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/6826017f-af3a-4abe-a522-7e745c657449)
-
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/9cf58674-c1e2-4a66-ad4d-1fdef173ad90)
 
