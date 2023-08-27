@@ -17,8 +17,7 @@
 ### 회원가입
 
 - 일반 유저 로그인을 위한 회원가입 기능
-
-![image](https://github.com/Sn-bow/CRUDp/assets/107871028/a290b1a2-4d79-40b5-9d35-a2140e263428);
+![image](https://github.com/Sn-bow/CRUDp/assets/107871028/a290b1a2-4d79-40b5-9d35-a2140e263428)
 
 - 폼 입력이 안되었을시 메세지 출력
 ![image](https://github.com/Sn-bow/CRUDp/assets/107871028/1ccac337-c4fb-417e-bb73-e65659b2c396)
