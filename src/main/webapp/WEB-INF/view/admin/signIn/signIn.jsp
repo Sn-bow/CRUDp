@@ -1,10 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../global/reset.css" />
-    <link rel="stylesheet" href="./signIn.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/global/reset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/signIn/signIn.css" />
     <title>CRUD</title>
   </head>
   <body>
@@ -12,13 +14,12 @@
       <div class="box">
         <div class="link-box">
           <span class="admin-link-span">
-            <a class="link" href="/client/signIn/signIn.html">CLIENT LOGIN</a>
+            <a class="link" href="/client/signIn">CLIENT LOGIN</a>
           </span>
         </div>
         <div class="client-signIn-box">
           <form
             class="client-signIn-form"
-            action="/admin/index/index.html"
             method="post"
           >
             <input
